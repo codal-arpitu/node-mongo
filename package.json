@@ -4,9 +4,7 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "dev": "nodemon index.js",
-    "build-docker": "docker build -t my-node-app .",
-    "run-docker": "docker run -p 4000:3000 my-node-app"
+    "dev": "nodemon index.js"
   },
   "keywords": [],
   "author": "",

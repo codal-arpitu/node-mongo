@@ -25,6 +25,15 @@ const noteSchema = new mongoose.Schema({
 // Define the Note model
 const Note = mongoose.model('Note', noteSchema);
 
+app.get('/', async (req, res) => {
+  try {
+    res.json('Hello there!');
+  } catch (error) {
+    console.error('Error retrieving notes:', error);
+    res.status(500).json({ error: 'Failed to retrieve notes' });
+  }
+});
+
 // Create a note
 app.post('/notes', async (req, res) => {
   const { title, content } = req.body;
